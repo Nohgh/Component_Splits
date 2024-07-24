@@ -8,7 +8,7 @@ jobs: #job설정
     runs-on: ubuntu-latest
     steps:
       -name: Checkout source code. #Repo checkout하기 
-       users: actions/checkout@main
+       uses: actions/checkout@main
 
       -name: Check Node v # Node 버전 확인
        run: node -v

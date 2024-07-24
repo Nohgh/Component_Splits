@@ -4,7 +4,7 @@ import Board from '../../components/Board/Board'
 const Home = () => {
   return (
     <div>
-      <div>Home입니다.</div>
+      <div>Home입니다!!.</div>
       <Board/>
     </div>
   )
