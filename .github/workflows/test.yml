@@ -8,7 +8,7 @@ jobs: #job설정
     runs-on: ubuntu-latest
     steps:
       -name: Checkout source code. #Repo checkout하기 
-       users: actions/checkout@v2
+       users: actions/checkout@main
 
       -name: Check Node v # Node 버전 확인
        run: node -v
@@ -21,10 +21,10 @@ jobs: #job설정
 
       -name: Deploy
        env:
-        AWS_ACCESS_KEY_ID:${{ secrets.SECRET_KEY}}
-        AWS_SECRET_ACCESS_KEY_ID:${{ secrets.SECRET_KEY}}
+        AWS_ACCESS_KEY_ID: ${{ secrets.SECRET_KEY}}
+        AWS_SECRET_ACCESS_KEY_ID: ${{ secrets.SECRET_KEY}}
       run: |
-      aws s3 cp
-      --recursive
-      --region ap-northeast-2 
+      aws s3 cp\
+      --recursive\
+      --region ap-northeast-2 \
       dist s3://http://spring-react-test.s3-website.ap-northeast-2.amazonaws.com
