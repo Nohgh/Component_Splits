@@ -34,7 +34,4 @@ jobs: #job설정
           AWS_ACCESS_KEY_ID: ${{ secrets.SECRET_KEY }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.SECRET_ACCESS_KEY }}
         run: |
-          aws s3 cp\
-          --recursive\
-          --region ap-northeast-2 \
-          dist s3://http://spring-react-test.com
+          aws s3 cp dist s3://spring-react-test/ --recursive --region ap-northeast-2
