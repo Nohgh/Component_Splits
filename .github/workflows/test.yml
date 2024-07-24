@@ -23,7 +23,7 @@ jobs: #job설정
       - name: Deploy
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.SECRET_KEY}}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.SECRET_KEY}}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.SECRET_ACCESS_KEY}}
       run: |
       aws s3 cp\
       --recursive\
