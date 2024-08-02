@@ -11,7 +11,7 @@ jobs: #job설정
       - name: Checkout source code. #Repo checkout하기 
         uses: actions/checkout@main
 
-      - name: Cache node modules # node modules 캐싱
+      - name: Cache node modules # node modules 캐싱(workflow 실행마다 의존성 설치 시간 단축 )
         uses: actions/cache@v1
         with:
           path: node_modules
@@ -29,7 +29,7 @@ jobs: #job설정
       - name: Build # React Build
         run: npm run build
 
-      - name: Deploy
+      - name: Deploy 
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.SECRET_KEY }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.SECRET_ACCESS_KEY }}

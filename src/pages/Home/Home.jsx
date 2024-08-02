@@ -1,11 +1,10 @@
 import React from 'react'
-import Board from '../../components/Board/Board'
+import TestuseRefDom from '../../components/HookTest/useRef/TestuseRefDom'
 
 const Home = () => {
   return (
     <div>
-      <div>workflow</div>
-      <Board/>
+      <TestuseRefDom/>
     </div>
   )
 }
