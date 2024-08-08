@@ -1,12 +1,12 @@
-import React from 'react'
-import TestuseRefDom from '../../components/HookTest/useRef/TestuseRefDom'
+// import TestuseRefDom from '../../components/HookTest/useRef/TestuseRefDom'
+import WhiteBoard from "../../components/Board/WhiteBoard";
 
 const Home = () => {
   return (
     <div>
-      <TestuseRefDom/>
+      <WhiteBoard />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

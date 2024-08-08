@@ -2,7 +2,6 @@ import React, { useRef } from 'react'
 //useRef를 쓰는 두번째 이유는 Dom에 대한 직접적인 접근을 하기 위해서 
 const TestuseRefDom = () => {
     const inputEl=useRef(null);
-
     return (
         <div>
             <input type="text" ref={inputEl} />
@@ -10,5 +9,4 @@ const TestuseRefDom = () => {
         </div>
   )
 }
-
 export default TestuseRefDom
